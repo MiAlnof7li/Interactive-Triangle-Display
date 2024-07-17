@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+public class MenuProgram {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+
+        while (true) {
+            displayMenu();
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                     displayRightAngleTriangle(scanner);
+                     break;
+                case 2:
+                     displayPalindromicTriangle(scanner);
+                     breake;
+                case 3:
+                     displayHelp();
+                     breake;
+                case 4:
+                     System.out.printIn("Exiting the program. Goodbye!");
+                     return;
+                default:
+                     System.out.printIn("Invalid choice. Please enter a number between 1 and 4.");
+            }
+       }
+   }
+
+   private static void displayMenu() {
+       System.out.printIn("Menu:");
+       System.out.printIn("1. Display a right-angle triangle of ones");
+       System.out.printIn("2. Display a Palindromic Triangle");
+       System.out.printIn("3. Help");
+       System.out.printIn("4. Exit");
+
+   }
+
+private static void displayRightAngleTriangle(Scanner scanner) {
+   System.out.print("Enter the number of lines: ");
+   int lines = scanner.nextInt();
+
+   for (int i = 1; i <= lines; i++) {
+       for (int j = 1; j =1; j <= i; j++) {
+           System.out.print("1");
+       }
+       System.out.printIn();
+    }
+}
+
+private static void displayPalindromicTriangle(Scanner scanner) {
+    System.out.print("Enter the number of lines: ");
+    int lines =scanner.nextInt();
+
+    for (int i = 1; i <= lines; i++) {
+         // Print spaces
+        for (int j = i <= lines; i++) {
+            System.out.print(" ");
+        }
+        // Print descending numbers
+        for (int j = 2; j <= i; j++) {
+            System.out.print(j + " ");
+        } 
+        System.out.printIn();
+     }
+ }
+
+ private static void displayHelp() {
+     System.out.printIn("Help: ");
+     System.out.printIn("1. Display a right-angle triangle of ones: Prompts for the number of lines and display a right-angle triangle of ones.");
+     System.out.printIn("2. Display a palindromic Triangle: Prompts for the number of lines and display a palindromic triangle.");
+     System.out.printIn("3. Help: Daisplays this help information.")
+     System.out.printIn("4. Exit: Exits the program.");
+  }
+}
+
+           
